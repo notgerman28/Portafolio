@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vladimir Brito - Portafolio</title>
+    <!-- Enlaces a hojas de estilo y scripts externos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="container">
+    <!-- Sección de navegación -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">VB</div>
+            <ul class="nav-links">
+                <li><a href="#scrollToSection1">Inicio</a></li>
+                <li><a href="#scrollToSection2">Sobre mí</a></li>
+                <li><a href="#scrollToSection3">Portafolio</a></li>
+                <li><a href="#scrollToSection4">Contacto</a></li>
+            </ul>
+            <button class="print-btn" onclick="printPage()">Imprimir</button>
+        </div>
+    </nav>
+
+    <!-- Sección de presentación -->
+    <section class="hero" id="scrollToSection1">
+        <div class="hero-content">
+            <h1>Vladimir Brito</h1>
+            <p>Front End Diseñador | Programador</p>
+        </div>
+    </section>
+
+    <!-- Sección de información personal -->
+    <section class="info-section" id="scrollToSection2">
+        <h1 class="resume-title">
+            <span class="highlight">Sobre</span> mí
+        </h1>
+        <div class="info-grid">
+            <!-- Columna sobre quién soy -->
+            <div class="info-column">
+                <h2>Quien soy?</h2>
+                <p class="info-text">Estudiante apasionado por la programación, con un fuerte enfoque en JavaScript junto a CSS.</p>
+                <p class="info-text">Me encanta resolver problemas, además de crear interfaces web atractivas, así como funcionales.</p>
+                <button class="download-cv" id="open-pdf" onclick="downloadPDF()">Descargar Mi CV</button>
+            </div>
+
+            <!-- Columna de información personal -->
+            <div class="info-column">
+                <h2>Información personal</h2>
+                <ul class="personal-info-list">
+                    <li class="personal-info-item">
+                        <span class="personal-info-label">Nacimiento:</span> 28/11/2007
+                    </li>
+                    <li class="personal-info-item">
+                        <span class="personal-info-label">Email:</span> germanbrito28@gmail.com
+                    </li>
+                    <li class="personal-info-item">
+                        <span class="personal-info-label">Phone:</span> +1 (829) 866-8541
+                    </li>
+                    <li class="personal-info-item">
+                        <span class="personal-info-label">Ubicación:</span> Santo Domingo
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna de experiencia -->
+            <div class="info-column">
+                <h2>Mi experiencia</h2>
+                <div class="expertise-item">
+                    <div class="expertise-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Diseño UX</h3>
+                        <p>Creación de interfaces intuitivas.</p>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <div class="expertise-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Desarrollo web</h3>
+                        <p>Diseño y desarrollo experiencias web.</p>
+                    </div>
+                </div>
+                <div class="expertise-item">
+                    <div class="expertise-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="expertise-content">
+                        <h3>Diseño gráfico:</h3>
+                        <p>Creación de elementos atractivos que enriquecen experiencias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de línea de tiempo -->
+    <section class="timeline-section">
+        <div class="timeline-grid">
+            <!-- Columna de experiencia laboral -->
+            <div class="timeline-column">
+                <h2>Experiencia</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-title">TrashCicle</div>
+                    <div class="timeline-description">
+                        Actualmente soy participante y colaboré con la creación de un proyecto llamado TrashCicle que consiste en el reciclaje de la basura de la República Dominicana mediante una máquina y un sistema de puntos y recompensas.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-title">Beach Hotel Palmar de Ocoa</div>
+                    <div class="timeline-description">
+                        Colaboré proactivamente con la creación del formulario principal de la página web del hotel turístico Beach Palmar de Ocoa, diseñando un registro agradable y funcional para el uso de los usuarios.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de educación -->
+            <div class="timeline-column">
+                <h2>Educacion</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2024</div>
+                    <div class="timeline-title">POLITÉCNICO ITLA</div>
+                    <div class="timeline-description">
+                        Mis primeros acercamientos al mundo de la tecnología e innovación despertando mi interés por el mundo del desarrollo y la resolución de problemas sociales.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de habilidades -->
+            <div class="timeline-column">
+                <h2>Habilidades</h2>
+                <div class="skill-item">
+                    <div class="skill-name">HTML5 & CSS3</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">PHP</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">SQL</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Figma</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de idiomas -->
+            <div class="timeline-column">
+                <h2>Idiomas</h2>
+                <div class="language-item">
+                    <div class="skill-name">Inglés</div>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="skill-name">Español</div>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de galería de portafolio -->
+    <section class="gallery-section" id="scrollToSection3">
+        <h1 class="resume-title">
+            <span class="highlight">Mi</span> Portafolio
+        </h1>
+        <div class="gallery">
+            <!-- Elementos de la galería -->
+            <div class="gallery-item">
+                <a href="https://github.com/notgerman28/TrashC1cle">
+                    <img src="img/trash.jpg" alt="Image 1">
+                </a>
+                <button class="info-button" onclick="openPopup('popup1')">Información</button>
+            </div>
+            <div class="gallery-item">
+                <a href="https://github.com/notgerman28/Notatio">
+                    <img src="img/nota.png" alt="Image 2">
+                </a>
+                <button class="info-button" onclick="openPopup('popup2')">Información</button>
+            </div>
+            <div class="gallery-item">
+                <a href="https://github.com/notgerman28/Briffs">
+                    <img src="img/briff.png" alt="Image 3">
+                </a>
+                <button class="info-button" onclick="openPopup('popup3')">Información</button>
+            </div>
+            <div class="gallery-item">
+                <a href="https://github.com/notgerman28/notgerman28-Formulario-crear-archivo-txt">
+                    <img src="img/formu.png" alt="Image 4">
+                </a>
+                <button class="info-button" onclick="openPopup('popup4')">Información</button>
+            </div>
+        </div>
+
+        <!-- Ventana emergente para información de la galería -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2 class="popup-title" id="popup-title">Información de la imagen</h2>
+                <p id="popup-text"></p>
+                <button class="close-button" onclick="closePopup()">&times;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contact-section" id="scrollToSection4">
+        <h1 class="contact">
+            <span class="contact-title">Cont</span>áctame
+        </h1>
+        <div class="social-icons">
+            <!-- Iconos de redes sociales -->
+            <div class="social-container">
+                <a href="https://www.instagram.com/german.vbc/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <p>Instagram</p>
+            </div>
+            <div class="social-container">
+                <a href="https://github.com/notgerman28" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <p>GitHub</p>
+            </div>
+            <div class="social-container">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=germanbrito28@gmail.com&su=Consulta%20Importante&body=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" aria-label="Gmail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <p>Gmail</p>
+            </div>
+            <div class="social-container">
+                <a href="https://www.linkedin.com/in/german-brito-a10027283/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <p>LinkedIn</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
